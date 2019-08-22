@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    android:background="@drawable/dtlspp">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/ll_logdetails1_id"
+        android:orientation="vertical"
+        android:weightSum="10">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/ll_logdetails2_id"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_pleaselogin_id"
+                android:text="Please Login"
+                android:textSize="35dp"
+                android:textColor="#00F"
+                android:textStyle="bold"/>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_enterdetailshere_id"
+                android:text="Enter your details here"
+                android:textSize="20dp"
+                android:layout_marginTop="20dp"
+                android:textColor="#fff"
+                android:textStyle="italic"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/ll_logdetails3_id"
+            android:layout_weight="5"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <EditText
+                android:layout_width="250dp"
+                android:layout_height="45dp"
+                android:id="@+id/et_enterphonenumber_id"
+                android:hint="Enter phone number"
+                android:textColor="@color/colorPrimary"
+                android:background="#fff"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="10dp"
+                android:textAlignment="textStart"/>
+
+            <EditText
+                android:layout_width="250dp"
+                android:layout_height="45dp"
+                android:id="@+id/et_enterusername_id"
+                android:hint="Enter user name"
+                android:textColor="@color/colorPrimary"
+                android:background="#fff"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="10dp"
+                android:textAlignment="textStart"/>
+
+            <EditText
+                android:layout_width="250dp"
+                android:layout_height="45dp"
+                android:id="@+id/et_enterpassword_id"
+                android:hint="Enter password"
+                android:textColor="@color/colorPrimary"
+                android:background="#fff"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="10dp"
+                android:textAlignment="textStart"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/bt_submit2_id"
+                android:padding="8dp"
+                android:text="Submit"
+                android:background="@color/colorPrimary"
+                android:textColor="#fff"
+                android:textAllCaps="false"/>
+
+            <Button
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/bt_createaccount_id"
+                android:padding="8dp"
+                android:text="Create Account"
+                android:background="@color/colorPrimary"
+                android:textColor="#fff"
+                android:layout_marginStart="10dp"
+                android:textAllCaps="false"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailsActivity"
+    android:background="@drawable/dtlspp">
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rl_svlayout_id">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/sv_scrollview_id">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/rl_content_id">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_regdetails_id"
+                    android:text="Please fill in the details required"
+                    android:textStyle="italic"
+                    android:textSize="17dp"
+                    android:textColor="#ffffff"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="50dp"
+                    android:background="#8A4B08"
+                    android:paddingRight="15dp"
+                    android:paddingLeft="15dp"/>
+
+
+                <EditText
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/et_enteryourcountry"
+                    android:hint="Enter your country"
+                    android:layout_marginTop="30dp"
+                    android:layout_below="@id/tv_regdetails_id"
+                    android:layout_marginLeft="20dp"
+                    android:background="#ffffff"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="15dp"/>
+
+
+                <EditText
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/et_enteryourfname_id"
+                    android:hint="Enter your first name"
+                    android:layout_marginTop="30dp"
+                    android:layout_below="@id/et_enteryourcountry"
+                    android:layout_marginLeft="20dp"
+                    android:background="#ffffff"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="15dp"/>
+
+
+                <EditText
+                    android:id="@+id/et_enteryourlastname_id"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/et_enteryourfname_id"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="28dp"
+                    android:background="#ffffff"
+                    android:hint="Enter your last name"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="15dp" />
+
+
+
+                <EditText
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/et_enteryourusername_id"
+                    android:hint="Enter your user name"
+                    android:layout_marginTop="30dp"
+                    android:layout_below="@id/et_enteryourlastname_id"
+                    android:layout_marginLeft="20dp"
+                    android:background="#ffffff"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="15dp"/>
+
+
+
+                <EditText
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/et_enteryouremailaddress_id"
+                    android:hint="Enter your email address"
+                    android:layout_marginTop="30dp"
+                    android:layout_below="@id/et_enteryourusername_id"
+                    android:layout_marginLeft="20dp"
+                    android:background="#ffffff"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="15dp"
+                    android:inputType="textEmailAddress"/>
+
+
+
+                <EditText
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/et_enteryourphonenumber_id"
+                    android:hint="Enter your phone number"
+                    android:layout_marginTop="30dp"
+                    android:layout_below="@id/et_enteryouremailaddress_id"
+                    android:layout_marginLeft="20dp"
+                    android:background="#ffffff"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="15dp"
+                    android:inputType="number"/>
+
+
+
+                <EditText
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/et_enteryourpassword_id"
+                    android:hint="Enter your password"
+                    android:layout_marginTop="30dp"
+                    android:layout_below="@id/et_enteryourphonenumber_id"
+                    android:layout_marginLeft="20dp"
+                    android:background="#ffffff"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="15dp"/>
+
+
+
+                <EditText
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/et_confirmyourpassword_id"
+                    android:hint="Confirm your password"
+                    android:layout_marginTop="30dp"
+                    android:layout_below="@id/et_enteryourpassword_id"
+                    android:layout_marginLeft="20dp"
+                    android:background="#ffffff"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="15dp"/>
+
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/bt_submit_id"
+                    android:text="Submit"
+                    android:layout_below="@id/et_confirmyourpassword_id"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="30dp"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:background="#8A4B08"
+                    android:textAllCaps="false"/>
+
+
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/bt_back_id"
+                    android:text="Back"
+                    android:layout_below="@id/et_confirmyourpassword_id"
+                    android:layout_marginLeft="170dp"
+                    android:layout_marginTop="30dp"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:background="#8A4B08"
+                    android:textAllCaps="false"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_space_id"
+                    android:layout_below="@id/bt_submit_id"
+                    android:layout_marginTop="20dp"/>
+
+
+
+
+
+
+
+
+
+            </RelativeLayout>
+
+
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+</RelativeLayout>

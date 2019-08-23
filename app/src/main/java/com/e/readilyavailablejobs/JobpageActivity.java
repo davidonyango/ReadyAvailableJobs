@@ -51,9 +51,28 @@ public class JobpageActivity extends AppCompatActivity {
         });
 
 
+        getJob = (Button)findViewById(R.id.bt_getjob_id);
+        getJob.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                btget();
+            }
+        });
+
 
 
     }
+
+    private void btget() {
+
+
+        Intent intent = new Intent(JobpageActivity.this,GetjobActivity.class);
+        startActivity(intent);
+
+    }
+
+
 
     private void btpost() {
 

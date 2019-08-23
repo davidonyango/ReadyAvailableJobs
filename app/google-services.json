@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1092386769906",
+    "firebase_url": "https://readilyavailablejobs.firebaseio.com",
+    "project_id": "readilyavailablejobs",
+    "storage_bucket": "readilyavailablejobs.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1092386769906:android:9b74925b298b8b5f",
+        "android_client_info": {
+          "package_name": "com.e.readilyavailablejobs"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1092386769906-2lv15p3m8a1pmhe8dfmg8ds8qltk5c17.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.e.readilyavailablejobs",
+            "certificate_hash": "39b5ea867c0a166a84ecc4780cd450c6c26fb8d8"
+          }
+        },
+        {
+          "client_id": "1092386769906-oje3lhdkiu96dvgrl1tv8mmldcodhjva.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgwWIqtP6NY82Wj7PKr-4Ft2sdzvC_Nlc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1092386769906-oje3lhdkiu96dvgrl1tv8mmldcodhjva.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -41,7 +41,24 @@ public class JobpageActivity extends AppCompatActivity {
             }
         });
 
+        postaJob = (Button)findViewById(R.id.bt_postjob_id);
+        postaJob.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+                btpost();
+            }
+        });
+
+
+
+
+    }
+
+    private void btpost() {
+
+        Intent intent = new Intent(JobpageActivity.this,JobActivity.class);
+        startActivity(intent);
     }
 
     private void btupload() {

@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".JobActivity"
+    android:background="#ffffff">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rl_scrollview2_id">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/sv_scrollview2_id">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/rl_postjobcontent_id">
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_name_id"
+                    android:text="Name"
+                    android:textSize="20dp"
+                    android:textColor="#000000"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="20dp"/>
+
+
+
+
+                <EditText
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/et_enteryourname_id"
+                    android:hint="Enter your name"
+                    android:layout_marginTop="22dp"
+                    android:layout_marginLeft="100dp"
+                    android:inputType="textPersonName"
+                    android:background="@drawable/enter_yourname_border"
+                    android:paddingBottom="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingLeft="15dp"
+                   android:textAlignment="center" />
+
+
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_country1_id"
+                    android:text="Country"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    android:layout_below="@id/tv_name_id"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="40dp"/>
+
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/et_enteryourcountry1_id"
+                    android:hint="Enter your country"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="110dp"
+                    android:layout_below="@id/et_enteryourname_id"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp"
+                    android:paddingBottom="15dp"
+                    android:background="@drawable/edittexts_border"
+                    android:textAlignment="center"/>
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_location_id"
+                    android:text="Location/City/Town"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    android:layout_below="@id/et_enteryourcountry1_id"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="30dp"/>
+
+
+                <EditText
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/et_describelocation1_id"
+                    android:hint="Describe location here"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_below="@id/tv_location_id"
+                    android:paddingLeft="20dp"
+                    android:paddingBottom="70dp"
+                    android:background="@drawable/location_border"
+                    android:textAlignment="center"/>
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_phonenumber_id"
+                    android:text="Phone Number"
+                    android:textSize="20dp"
+                   android:layout_below="@id/et_describelocation1_id"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:textColor="#000000"/>
+
+
+                <EditText
+                    android:id="@+id/et_enterphonenumber2_id"
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_phonenumber_id"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="31dp"
+                    android:background="@drawable/edittexts_border"
+                    android:hint="Enter phone number"
+                    android:inputType="number"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="15dp"
+                    android:textAlignment="center"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_jobdescription_id"
+                    android:textSize="20dp"
+                    android:text="The type of job to be done"
+                    android:textColor="#000000"
+                    android:layout_below="@id/et_enterphonenumber2_id"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="20dp"/>
+
+                <EditText
+                    android:id="@+id/et_jobdescription_id"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_jobdescription_id"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/edittexts_border"
+                    android:hint="Description here"
+                    android:paddingLeft="20dp"
+                    android:paddingBottom="70dp"
+                    android:textAlignment="center" />
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_describethetermsofemployment"
+                    android:textSize="20dp"
+                    android:text="The Duration of Employment"
+                    android:textColor="#000000"
+                    android:layout_below="@id/et_jobdescription_id"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="20dp"/>
+
+
+                <EditText
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/et_theemploymentduration_id"
+                    android:hint="Describe the duration here"
+                    android:layout_below="@id/tv_describethetermsofemployment"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:paddingBottom="70dp"
+                    android:paddingLeft="15dp"
+                    android:background="@drawable/edittexts_border"
+                    android:textAlignment="center"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_skillsandrequrements_id"
+                    android:text="Requirements/skills needed"
+                    android:textSize="20dp"
+                    android:textColor="#000000"
+                    android:layout_below="@id/et_theemploymentduration_id"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"/>
+
+                <EditText
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/et_describerequirements_id"
+                    android:hint="Describe requirements here"
+                    android:layout_below="@id/tv_skillsandrequrements_id"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:paddingBottom="70dp"
+                    android:paddingLeft="15dp"
+                    android:background="@drawable/edittexts_border"
+                    android:textAlignment="center"/>
+
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/bt_Submit1_id"
+                    android:text="Submit"
+                    android:textStyle="bold"
+                    android:layout_below="@id/et_describerequirements_id"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="40dp"
+                    android:textColor="#ffffff"
+                    android:background="@drawable/submit_border"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:textAllCaps="false"/>
+
+
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/bt_homepage_id"
+                    android:text="Home page"
+                    android:layout_below="@id/et_describerequirements_id"
+                    android:layout_marginLeft="170dp"
+                    android:layout_marginTop="40dp"
+                    android:textColor="#ffffff"
+                    android:background="@drawable/buttons_border"
+                    android:textStyle="bold"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingRight="20dp"
+                    android:paddingLeft="20dp"
+                    android:textAllCaps="false"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_space_id"
+                    android:layout_below="@id/bt_Submit1_id"
+                    android:layout_marginTop="50dp"/>
+
+
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+</RelativeLayout>
+
+</RelativeLayout>

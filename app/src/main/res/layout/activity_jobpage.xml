@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".JobpageActivity"
-    android:background="@drawable/profilena">
+    android:background="#ffffff">
 
 
 
@@ -60,7 +60,7 @@
             android:text="Upload Profile"
             android:textColor="#ffffff"
             android:textStyle="bold"
-            android:background="#2A0A0A"
+            android:background="@drawable/buttons_border"
             android:layout_marginTop="5dp"
             android:layout_marginStart="100dp"
             android:textAllCaps="false"/>
@@ -70,10 +70,10 @@
             android:layout_width="250dp"
             android:layout_height="45dp"
             android:id="@+id/bt_postjob_id"
-            android:text="Post Available Aob"
+            android:text="Post Available Job"
             android:textStyle="bold"
             android:textColor="#ffffff"
-            android:background="#2A0A0A"
+            android:background="@drawable/buttons_border"
             android:layout_marginTop="30dp"
             android:layout_marginStart="35dp"
             android:textAllCaps="false"/>
@@ -87,7 +87,7 @@
             android:text="Get Available Job"
             android:textStyle="bold"
             android:textColor="#ffffff"
-            android:background="#2A0A0A"
+            android:background="@drawable/buttons_border"
             android:layout_marginTop="30dp"
             android:layout_marginStart="35dp"
             android:textAllCaps="false"/>

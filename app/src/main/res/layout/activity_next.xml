@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".NextActivity"
     android:orientation="horizontal"
-   android:background="@drawable/ppn">
+   android:background="#ffffff">
 
 
 
@@ -25,14 +25,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/bt_createanaccount_id"
-        android:text="Create an account"
+        android:text="Create An Account"
         android:layout_marginTop="40dp"
         android:layout_below="@id/tv_clicktocreateacc_id"
         android:layout_centerHorizontal="true"
-        android:background="#330000"
+        android:background="@drawable/buttons_border"
         android:textColor="#ffffff"
         android:paddingRight="15dp"
-        android:paddingLeft="15dp"/>
+        android:paddingLeft="15dp"
+        android:textAllCaps="false"/>
 
 
     <TextView
@@ -57,10 +58,11 @@
         android:layout_marginTop="20dp"
         android:layout_below="@id/tv_logintext_id"
         android:layout_centerHorizontal="true"
-        android:background="#330000"
+        android:background="@drawable/buttons_border"
         android:textColor="#ffffff"
         android:paddingRight="15dp"
-        android:paddingLeft="15dp"/>
+        android:paddingLeft="15dp"
+        android:textAllCaps="false"/>
 
 
 

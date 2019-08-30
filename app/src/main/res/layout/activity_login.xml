@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LoginActivity"
-    android:background="@drawable/dtlspp">
+    android:background="#ffffff">
 
 
 
@@ -31,7 +31,7 @@
                 android:id="@+id/tv_pleaselogin_id"
                 android:text="Please Login"
                 android:textSize="35dp"
-                android:textColor="#FFFFFF"
+                android:textColor="#000000"
                 android:textStyle="bold"/>
 
 
@@ -43,7 +43,7 @@
                 android:text="Enter your details here"
                 android:textSize="20dp"
                 android:layout_marginTop="20dp"
-                android:textColor="#fff"
+                android:textColor="#000000"
                 android:textStyle="italic"/>
 
         </LinearLayout>
@@ -63,10 +63,11 @@
                 android:id="@+id/et_enterphonenumber_id"
                 android:hint="Enter phone number"
                 android:textColor="@color/colorPrimary"
-                android:background="#fff"
+                android:background="@drawable/edittexts_border"
                 android:layout_marginTop="30dp"
                 android:layout_marginStart="10dp"
-                android:textAlignment="textStart"/>
+                android:textAlignment="center"
+                />
 
             <EditText
                 android:layout_width="250dp"
@@ -74,10 +75,10 @@
                 android:id="@+id/et_enterusername_id"
                 android:hint="Enter user name"
                 android:textColor="@color/colorPrimary"
-                android:background="#fff"
+                android:background="@drawable/edittexts_border"
                 android:layout_marginTop="30dp"
                 android:layout_marginStart="10dp"
-                android:textAlignment="textStart"/>
+                android:textAlignment="center"/>
 
             <EditText
                 android:layout_width="250dp"
@@ -85,10 +86,10 @@
                 android:id="@+id/et_enterpassword_id"
                 android:hint="Enter password"
                 android:textColor="@color/colorPrimary"
-                android:background="#fff"
+                android:background="@drawable/edittexts_border"
                 android:layout_marginTop="30dp"
                 android:layout_marginStart="10dp"
-                android:textAlignment="textStart"/>
+                android:textAlignment="center"/>
 
 
         </LinearLayout>
@@ -106,7 +107,7 @@
                 android:id="@+id/bt_submit2_id"
                 android:padding="8dp"
                 android:text="Submit"
-                android:background="@color/colorPrimary"
+                android:background="@drawable/submit_border"
                 android:textColor="#fff"
                 android:textAllCaps="false"/>
 
@@ -116,7 +117,7 @@
                 android:id="@+id/bt_createaccount_id"
                 android:padding="8dp"
                 android:text="Create Account"
-                android:background="@color/colorPrimary"
+                android:background="@drawable/buttons_border"
                 android:textColor="#fff"
                 android:layout_marginStart="10dp"
                 android:textAllCaps="false"/>

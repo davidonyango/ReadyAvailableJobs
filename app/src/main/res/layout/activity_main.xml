@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="@drawable/profilena">
+    android:background="#ffffff">
 
 
     <TextView
@@ -15,7 +15,7 @@
         android:text="NOW GET"
         android:textSize="30dp"
         android:textStyle="bold"
-        android:textColor="#FFFFFF"
+        android:textColor="#0000ff"
         android:layout_marginTop="50dp"
         android:layout_centerHorizontal="true"/>
 
@@ -29,7 +29,7 @@
         android:textSize="30dp"
         android:textStyle="italic"
         android:layout_below="@id/tv_profiletext1_id"
-        android:textColor="#FFFFFF"
+        android:textColor="#0000ff"
         android:layout_marginTop="30dp"
         android:layout_centerHorizontal="true"/>
 
@@ -44,7 +44,7 @@
         android:textSize="30dp"
         android:textStyle="bold"
         android:layout_below="@id/tv_profiletext2_id"
-        android:textColor="#FE2E2E"
+        android:textColor="#0000ff"
         android:layout_marginTop="35dp"
         android:layout_centerHorizontal="true"/>
 

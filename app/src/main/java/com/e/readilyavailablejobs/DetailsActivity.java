@@ -10,15 +10,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class DetailsActivity extends AppCompatActivity {
-    private TextView filldetails;
-    private EditText country;
-    private EditText firname;
-    private EditText laname;
-    private EditText username;
-    private EditText emailadress;
-    private EditText phonumber;
-    private EditText enterpassword;
-    private EditText conpassword;
+
+    private EditText country,firname, laname, username,emailadress, phonumber,enterpassword,conpassword;
     private Button submit;
     private Button back;
 
@@ -27,7 +20,7 @@ public class DetailsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details);
 
-        filldetails = (TextView)findViewById(R.id.tv_regdetails_id);
+
         country = (EditText)findViewById(R.id.et_enteryourcountry);
         firname = (EditText)findViewById(R.id.et_enteryourfname_id);
         laname = (EditText)findViewById(R.id.et_enteryourlastname_id);

@@ -23,9 +23,9 @@ import java.util.List;
 
 
 public class JobActivity extends AppCompatActivity {
-    private EditText enterYourName, enterYourCountry1,
-            dscribeLocation1, enterPhoneNumber, jobDescription,
-            theEmploymentDuration, describeRequirements;
+    private EditText txtName, txtCountry,
+            txtLocation, txtPhoneNumber, txtJobType,
+            txtDuration, txtRequirements;
 
     private Button submit, homePage;
 
@@ -44,16 +44,16 @@ public class JobActivity extends AppCompatActivity {
 
 
 
-        enterYourName = (EditText) findViewById(R.id.et_enteryourname_id);
-        enterYourCountry1 = (EditText) findViewById(R.id.et_enteryourcountry1_id);
-        dscribeLocation1 = (EditText) findViewById(R.id.et_describelocation1_id);
-        enterPhoneNumber = (EditText) findViewById(R.id.et_enterphonenumber2_id);
-        jobDescription= (EditText) findViewById(R.id.et_jobdescription_id);
-        theEmploymentDuration = (EditText) findViewById(R.id.et_theemploymentduration_id);
-        describeRequirements = (EditText) findViewById(R.id.et_describerequirements_id);
+        txtName = (EditText) findViewById(R.id.et_personname_id);
+        txtCountry = (EditText) findViewById(R.id.et_personcountry_id);
+        txtLocation = (EditText) findViewById(R.id.et_personlocation_id);
+        txtPhoneNumber = (EditText) findViewById(R.id.et_personphonenumber_id);
+        txtJobType= (EditText) findViewById(R.id.et_personjobtype_id);
+        txtDuration = (EditText) findViewById(R.id.et_personduration_id);
+        txtRequirements = (EditText) findViewById(R.id.et_personrequirements_id);
 
 
-        databaseReference = FirebaseDatabase.getInstance().getReference().child("User details");
+        databaseReference = FirebaseDatabase.getInstance().getReference().child("Jobs Posted");
         submit = (Button)findViewById(R.id.bt_Submit1_id);
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -85,13 +85,13 @@ public class JobActivity extends AppCompatActivity {
          * Convert the input details into strings
          */
 
-        String userName = enterYourName.getText().toString().trim();
-         String userCountry = enterYourCountry1.getText().toString().trim();
-         String userLocation = dscribeLocation1.getText().toString().trim();
-         String userPhoneNumber = enterPhoneNumber.getText().toString().trim();
-        String userJob = jobDescription.getText().toString().trim();
-        String userJobDuration = theEmploymentDuration.getText().toString().trim();
-         String userRequirements = describeRequirements.getText().toString().trim();
+         String userName = txtName.getText().toString().trim();
+         String userCountry = txtCountry.getText().toString().trim();
+         String userLocation = txtLocation.getText().toString().trim();
+         String userPhoneNumber = txtPhoneNumber.getText().toString().trim();
+         String userJob = txtJobType.getText().toString().trim();
+         String userJobDuration = txtDuration.getText().toString().trim();
+         String userRequirements = txtRequirements.getText().toString().trim();
 
         /**
          * Setting validations to ensure that the user doesnot leave any space blank
@@ -100,27 +100,27 @@ public class JobActivity extends AppCompatActivity {
           && !TextUtils.isEmpty(userCountry)
           && !TextUtils.isEmpty(userLocation)
           && !TextUtils.isEmpty(userPhoneNumber)
-         && !TextUtils.isEmpty(userJob)
-         && !TextUtils.isEmpty(userJobDuration)
-         && !TextUtils.isEmpty(userRequirements))
+          && !TextUtils.isEmpty(userJob)
+          && !TextUtils.isEmpty(userJobDuration)
+          && !TextUtils.isEmpty(userRequirements))
         {
             //sending the information to database
 
             String storeUserData = databaseReference.push().getKey();
 
-            Davido UserDataUploadClass = new Davido
+            Davido jobsposted = new Davido
                     (storeUserData,userName, userLocation,
                     userPhoneNumber, userJob, userCountry,
                     userJobDuration, userRequirements);
 
-            databaseReference.child(storeUserData).setValue(UserDataUploadClass);
-            enterYourName.setText("");
-            enterPhoneNumber.setText("");
-            enterYourCountry1.setText("");
-            theEmploymentDuration.setText("");
-            jobDescription.setText("");
-            describeRequirements.setText("");
-            dscribeLocation1.setText("");
+            databaseReference.child(storeUserData).setValue(jobsposted);
+            txtName.setText("");
+            txtPhoneNumber.setText("");
+            txtCountry.setText("");
+            txtDuration.setText("");
+            txtJobType.setText("");
+            txtLocation.setText("");
+            txtRequirements.setText("");
 
             Toast.makeText(this, "Uploaded successfully", Toast.LENGTH_SHORT).show();
 

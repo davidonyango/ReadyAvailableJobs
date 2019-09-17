@@ -5,13 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".JobActivity"
-    android:background="#ffffff">
+    android:background="@drawable/content_border">
 
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/rl_scrollview2_id">
+        android:id="@+id/rl_scrollview2_id"
+        android:background="@drawable/content_border"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp">
 
         <ScrollView
             android:layout_width="match_parent"
@@ -35,22 +38,19 @@
                     android:layout_marginTop="20dp"
                     android:layout_marginLeft="20dp"/>
 
-
-
-
                 <EditText
-                    android:layout_width="200dp"
+                    android:id="@+id/et_personname_id"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/et_enteryourname_id"
-                    android:hint="Enter your name"
+                    android:layout_marginLeft="110dp"
                     android:layout_marginTop="22dp"
-                    android:layout_marginLeft="100dp"
-                    android:inputType="textPersonName"
                     android:background="@drawable/enter_yourname_border"
+                    android:hint="Enter your full names"
+                    android:inputType="textPersonName"
+                    android:paddingLeft="33dp"
+                    android:paddingRight="40dp"
                     android:paddingBottom="15dp"
-                    android:paddingRight="15dp"
-                    android:paddingLeft="15dp"
-                   android:textAlignment="center" />
+                    android:textAlignment="center" />
 
 
 
@@ -71,11 +71,11 @@
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/et_enteryourcountry1_id"
+                    android:id="@+id/et_personcountry_id"
                     android:hint="Enter your country"
                     android:layout_marginTop="30dp"
                     android:layout_marginLeft="110dp"
-                    android:layout_below="@id/et_enteryourname_id"
+                    android:layout_below="@id/et_personname_id"
                     android:paddingLeft="30dp"
                     android:paddingRight="30dp"
                     android:paddingBottom="15dp"
@@ -91,7 +91,7 @@
                     android:text="Location/City/Town"
                     android:textColor="#000000"
                     android:textSize="20dp"
-                    android:layout_below="@id/et_enteryourcountry1_id"
+                    android:layout_below="@id/et_personcountry_id"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="30dp"/>
 
@@ -99,7 +99,7 @@
                 <EditText
                     android:layout_width="250dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/et_describelocation1_id"
+                    android:id="@+id/et_personlocation_id"
                     android:hint="Describe location here"
                     android:layout_marginTop="20dp"
                     android:layout_marginLeft="20dp"
@@ -117,14 +117,14 @@
                     android:id="@+id/tv_phonenumber_id"
                     android:text="Phone Number"
                     android:textSize="20dp"
-                   android:layout_below="@id/et_describelocation1_id"
+                   android:layout_below="@id/et_personlocation_id"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="20dp"
                     android:textColor="#000000"/>
 
 
                 <EditText
-                    android:id="@+id/et_enterphonenumber2_id"
+                    android:id="@+id/et_personphonenumber_id"
                     android:layout_width="240dp"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/tv_phonenumber_id"
@@ -146,12 +146,12 @@
                     android:textSize="20dp"
                     android:text="The type of job to be done"
                     android:textColor="#000000"
-                    android:layout_below="@id/et_enterphonenumber2_id"
+                    android:layout_below="@id/et_personphonenumber_id"
                     android:layout_marginTop="20dp"
                     android:layout_marginLeft="20dp"/>
 
                 <EditText
-                    android:id="@+id/et_jobdescription_id"
+                    android:id="@+id/et_personjobtype_id"
                     android:layout_width="250dp"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/tv_jobdescription_id"
@@ -172,7 +172,7 @@
                     android:textSize="20dp"
                     android:text="The Duration of Employment"
                     android:textColor="#000000"
-                    android:layout_below="@id/et_jobdescription_id"
+                    android:layout_below="@id/et_personjobtype_id"
                     android:layout_marginTop="20dp"
                     android:layout_marginLeft="20dp"/>
 
@@ -180,7 +180,7 @@
                 <EditText
                     android:layout_width="250dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/et_theemploymentduration_id"
+                    android:id="@+id/et_personduration_id"
                     android:hint="Describe the duration here"
                     android:layout_below="@id/tv_describethetermsofemployment"
                     android:layout_marginTop="20dp"
@@ -197,14 +197,14 @@
                     android:text="Requirements/skills needed"
                     android:textSize="20dp"
                     android:textColor="#000000"
-                    android:layout_below="@id/et_theemploymentduration_id"
+                    android:layout_below="@id/et_personduration_id"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="10dp"/>
 
                 <EditText
                     android:layout_width="250dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/et_describerequirements_id"
+                    android:id="@+id/et_personrequirements_id"
                     android:hint="Describe requirements here"
                     android:layout_below="@id/tv_skillsandrequrements_id"
                     android:layout_marginTop="20dp"
@@ -221,7 +221,7 @@
                     android:id="@+id/bt_Submit1_id"
                     android:text="Submit"
                     android:textStyle="bold"
-                    android:layout_below="@id/et_describerequirements_id"
+                    android:layout_below="@id/et_personrequirements_id"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="40dp"
                     android:textColor="#ffffff"
@@ -239,7 +239,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/bt_homepage_id"
                     android:text="Home page"
-                    android:layout_below="@id/et_describerequirements_id"
+                    android:layout_below="@id/et_personrequirements_id"
                     android:layout_marginLeft="170dp"
                     android:layout_marginTop="40dp"
                     android:textColor="#ffffff"

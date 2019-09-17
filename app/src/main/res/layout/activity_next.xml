@@ -6,7 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".NextActivity"
     android:orientation="horizontal"
-   android:background="#ffffff">
+   android:background="@drawable/content_border">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rl_content_border_id"
+        android:background="@drawable/content_border"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp">
 
 
 
@@ -67,6 +75,6 @@
 
 
 
-
+    </RelativeLayout>
 
 </RelativeLayout>

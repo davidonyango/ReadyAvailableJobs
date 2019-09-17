@@ -2,24 +2,22 @@ package com.e.readilyavailablejobs;
 
 public class Davido {
 
-private String userName;
-private String userCountry;
-private String userLocation;
-private String userPhoneNumber;
-private String userJob;
-private String userJobDuration;
-private String userRequirements;
+    private String userName;
+    private String userCountry;
+    private String userLocation;
+    private String userPhoneNumber;
+    private String userJob;
+    private String userJobDuration;
+    private String userRequirements;
 
 
+    public Davido() {
+    }
 
+    public Davido(String storeUserData, String userName, String userLocation,
+                  String userPhoneNumber, String userJob, String userCountry,
+                  String userJobDuration, String userRequirements) {
 
-    /**
-     * Generating the actual constructor
-     */
-    public Davido(String userName, String userCountry, String userLocation,
-                  String userPhoneNumber, String userJob, String userJobDuration,
-                  String userRequirements)
-    {
         this.userName = userName;
         this.userCountry = userCountry;
         this.userLocation = userLocation;
@@ -29,27 +27,6 @@ private String userRequirements;
         this.userRequirements = userRequirements;
     }
 
-    /**
-     * Generating an empty constructor
-     * @param storeUserData
-     * @param userName
-     * @param userLocation
-     * @param userPhoneNumber
-     * @param userJob
-     * @param userCountry
-     * @param userJobDuration
-     * @param userRequirements
-     */
-    public Davido(String storeUserData, String userName, String userLocation,
-                  String userPhoneNumber, String userJob, String userCountry,
-                  String userJobDuration, String userRequirements)
-    {
-        //Empty constructor needed
-    }
-
-    /**
-     * Generating getters
-     */
     public String getUserName() {
         return userName;
     }
@@ -78,9 +55,6 @@ private String userRequirements;
         return userRequirements;
     }
 
-    /**
-     * Generating setters
-     */
     public void setUserName(String userName) {
         this.userName = userName;
     }
@@ -109,6 +83,5 @@ private String userRequirements;
         this.userRequirements = userRequirements;
     }
 }
-
 
 

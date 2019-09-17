@@ -5,11 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".JobpageActivity"
-    android:background="#ffffff">
+    android:background="@drawable/content_border">
 
 
 
-
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rl_content_border_id"
+    android:background="@drawable/content_border"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp">
 
 
 
@@ -61,8 +67,8 @@
             android:textColor="#ffffff"
             android:textStyle="bold"
             android:background="@drawable/buttons_border"
-            android:layout_marginTop="5dp"
-            android:layout_marginStart="100dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="90dp"
             android:textAllCaps="false"/>
 
 
@@ -75,7 +81,7 @@
             android:textColor="#ffffff"
             android:background="@drawable/buttons_border"
             android:layout_marginTop="30dp"
-            android:layout_marginStart="35dp"
+            android:layout_marginStart="20dp"
             android:textAllCaps="false"/>
 
 
@@ -89,7 +95,7 @@
             android:textColor="#ffffff"
             android:background="@drawable/buttons_border"
             android:layout_marginTop="30dp"
-            android:layout_marginStart="35dp"
+            android:layout_marginStart="20dp"
             android:textAllCaps="false"/>
 
 
@@ -114,5 +120,6 @@
 
     </LinearLayout>
 
+</RelativeLayout>
 
 </RelativeLayout>

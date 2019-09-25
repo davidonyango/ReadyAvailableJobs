@@ -2,12 +2,16 @@ package com.e.readilyavailablejobs;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.Manifest;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -21,11 +25,17 @@ public class JobpageActivity extends AppCompatActivity {
     private static final int PICK_IMAGE_REQUEST = 1;
     private Uri profileImageUri;
 
+    private Toolbar mtoolbar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_jobpage);
+
+       mtoolbar = (Toolbar)findViewById(R.id.toolbar);
+       setTitle("Home Profile");
+       setSupportActionBar(mtoolbar);
 
         if (Build.VERSION.SDK_INT >22){
             requestPermissions(new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, 2);
@@ -104,6 +114,51 @@ public class JobpageActivity extends AppCompatActivity {
             Toast.makeText(this, "Please choose image", Toast.LENGTH_SHORT).show();
 
         }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.commonmenu,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+         int id = item.getItemId();
+
+         if (id==R.id.share)
+
+         {
+             Toast.makeText(this, "Share menu is clicked", Toast.LENGTH_SHORT).show();
+             switch (item.getItemId()){
+
+                 case R.id.share:
+                     Intent sharingIntent = new Intent(Intent.ACTION_SEND);
+                     sharingIntent.setType("text/plain");
+                     String shareBody ="https://getreadilyavailablejobs.com/davidoRajApp";
+                     String shareSubject = "Your Subject Here";
+
+                     sharingIntent.putExtra(Intent.EXTRA_TEXT,shareBody);
+                     sharingIntent.putExtra(Intent.EXTRA_SUBJECT,shareSubject);
+
+                     startActivity(Intent.createChooser(sharingIntent,"Share Via"));
+                     break;
+             }
+
+         }
+         else
+             if (id==R.id.about){
+
+                 Toast.makeText(this, "About menu is clicked", Toast.LENGTH_SHORT).show();
+             }
+             else
+             if (id==R.id.logout){
+
+                 Toast.makeText(this, "Logout menu is clicked", Toast.LENGTH_SHORT).show();
+             }
+
+
+        return super.onOptionsItemSelected(item);
     }
 }
 

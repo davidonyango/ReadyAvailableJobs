@@ -15,11 +15,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".GetjobActivity"></activity>
-        <activity android:name=".JobActivity" />
+        <activity android:name=".GetjobActivity"
+            android:parentActivityName=".JobpageActivity"></activity>
+        <activity android:name=".JobActivity"
+            android:parentActivityName=".JobpageActivity"/>
         <activity android:name=".JobpageActivity" />
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".DetailsActivity" />
+        <activity android:name=".LoginActivity"
+            android:parentActivityName=".NextActivity"/>
+        <activity android:name=".DetailsActivity"
+            android:parentActivityName=".NextActivity"/>
         <activity android:name=".NextActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

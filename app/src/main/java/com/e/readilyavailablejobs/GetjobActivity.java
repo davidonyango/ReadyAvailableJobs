@@ -2,6 +2,7 @@ package com.e.readilyavailablejobs;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 
 import android.content.Intent;
@@ -24,12 +25,19 @@ public class GetjobActivity extends AppCompatActivity {
     private ListView listView;
     DatabaseReference databaseReference;
     List<Davido> userJobsList;
+    private Toolbar mtoolbar;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_getjob);
+
+        mtoolbar = (Toolbar)findViewById(R.id.toolbar);
+        setSupportActionBar(mtoolbar);
+        getSupportActionBar().setTitle("Posted Ready Jobs");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         listView = findViewById(R.id.list_view);
         databaseReference = FirebaseDatabase.getInstance().getReference("Jobs Posted");
         userJobsList = new ArrayList<>();

@@ -1,6 +1,7 @@
 package com.e.readilyavailablejobs;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,11 +18,18 @@ public class LoginActivity extends AppCompatActivity {
     private Button submit2;
     private Button ctreateaccount;
     private TextView accountRequst;
+    private Toolbar mtoolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        mtoolbar = (Toolbar)findViewById(R.id.toolbar);
+        setSupportActionBar(mtoolbar);
+        getSupportActionBar().setTitle("Login");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         accountRequst = (TextView)findViewById(R.id.tv_accountrequest_id);
         enterDetailshere = (TextView)findViewById(R.id.tv_enterdetailshere_id);
         entphonenumber = (EditText) findViewById(R.id.et_enterphonenumber_id);

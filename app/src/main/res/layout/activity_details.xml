@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,6 +8,16 @@
     android:background="#ffffff"
     android:layout_weight="7">
 
+    <include
+        layout="@layout/toolbar"
+        android:id="@+id/toolbar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp">
+
+    </RelativeLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,24 +27,26 @@
         android:gravity="center">
 
 
-
-    <RelativeLayout
+        <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/rl_svlayout_id">
 
-        <ScrollView
+
+            <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/sv_scrollview_id">
 
-            <RelativeLayout
+
+                <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:id="@+id/rl_content_id"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:paddingBottom="30dp">
+
 
 
                 <TextView
@@ -46,7 +58,7 @@
                     android:textSize="17dp"
                     android:textColor="#000000"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="50dp"
+                    android:layout_marginTop="90dp"
                     android:paddingRight="15dp"
                     android:paddingLeft="15dp"/>
 
@@ -200,14 +212,6 @@
                     android:layout_below="@id/bt_submit_id"
                     android:layout_marginTop="32dp"/>
 
-
-
-
-
-
-
-
-
             </RelativeLayout>
 
 
@@ -217,4 +221,4 @@
     </RelativeLayout>
     </LinearLayout>
 
-</LinearLayout>
+</RelativeLayout>

@@ -1,6 +1,7 @@
 package com.e.readilyavailablejobs;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -22,6 +23,8 @@ public class DetailsActivity extends AppCompatActivity {
     private Button submit;
     private Button login2;
 
+    private Toolbar mtoolbar;
+
     Signer signer;
 
     //Firebase
@@ -34,6 +37,10 @@ public class DetailsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details);
 
+        mtoolbar = (Toolbar)findViewById(R.id.toolbar);
+        setSupportActionBar(mtoolbar);
+        getSupportActionBar().setTitle("Create Account");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
         laname = (EditText) findViewById(R.id.et_enteryourlastname_id);

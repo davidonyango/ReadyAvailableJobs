@@ -1,6 +1,7 @@
 package com.e.readilyavailablejobs;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 
 import android.content.Intent;
@@ -28,6 +29,7 @@ public class JobActivity extends AppCompatActivity {
             txtDuration, txtRequirements;
 
     private Button submit, homePage;
+    private Toolbar mtoolbar;
 
     private  Class<Davido> UserDataUploadClass;
 
@@ -41,6 +43,11 @@ public class JobActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_job);
+
+        mtoolbar = (Toolbar)findViewById(R.id.toolbar);
+        setSupportActionBar(mtoolbar);
+        getSupportActionBar().setTitle("Post A Ready Jobs");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
 

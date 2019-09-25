@@ -7,6 +7,18 @@
     tools:context=".JobpageActivity"
     android:background="@drawable/content_border">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+        <include
+            layout="@layout/toolbar"
+            android:id="@+id/toolbar"/>
+
+    </RelativeLayout>
+
 
 
 <RelativeLayout
@@ -15,8 +27,6 @@
     android:id="@+id/rl_content_border_id"
     android:layout_marginLeft="10dp"
     android:layout_marginRight="10dp">
-
-
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -77,7 +87,7 @@
             android:layout_height="28dp"
             android:layout_marginTop="20dp"
             android:background="#0080ff"
-            android:text="Post Ready Jobs"
+            android:text="Post A Ready Job"
             android:textAllCaps="false"
             android:textColor="#ffffff"
             android:textStyle="bold" />
@@ -88,7 +98,7 @@
             android:layout_width="250dp"
             android:layout_height="28dp"
             android:id="@+id/bt_getjob_id"
-            android:text="Get Posted Jobs"
+            android:text="Posted Ready Jobs"
             android:textStyle="bold"
             android:textColor="#ffffff"
             android:layout_marginTop="40dp"

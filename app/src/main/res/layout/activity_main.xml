@@ -1,61 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="#ffffff">
-
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/tv_profiletext1_id"
-        android:text="NOW GET"
-        android:textSize="30dp"
-        android:textStyle="bold"
-        android:textColor="#0000ff"
-        android:layout_marginTop="50dp"
-        android:layout_centerHorizontal="true"/>
+    android:background="#0080FF"
+    android:orientation="vertical"
+    android:weightSum="5">
 
 
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/tv_profiletext2_id"
-        android:text="READILY AVAILABLE"
-        android:textSize="30dp"
-        android:textStyle="italic"
-        android:layout_below="@id/tv_profiletext1_id"
-        android:textColor="#0000ff"
-        android:layout_marginTop="30dp"
-        android:layout_centerHorizontal="true"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7">
+
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/tv_welcomingtv1_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="G"
+            android:layout_marginLeft="140dp"
+            android:textColor="#ffffff"
+            android:layout_marginTop="235dp"
+            android:textSize="35dp"
+            android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_welcomingtv2_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ET"
+                android:layout_marginLeft="162dp"
+                android:textColor="#ffffff"
+                android:layout_marginTop="245dp"
+                android:textSize="23dp"
+                android:textStyle="normal"/>
 
 
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_welcomingtv3_id"
+            android:text="READY JOBS"
+            android:textSize="23dp"
+            android:layout_below="@+id/tv_welcomingtv1_id"
+           android:layout_centerHorizontal="true"
+            android:textColor="#ffffff"
+            android:layout_marginTop="1dp"
+            android:textStyle="normal" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/tv_profiletext3_id"
-        android:text="JOBS HERE"
-        android:textSize="30dp"
-        android:textStyle="bold"
-        android:layout_below="@id/tv_profiletext2_id"
-        android:textColor="#0000ff"
-        android:layout_marginTop="35dp"
-        android:layout_centerHorizontal="true"/>
-
-
-
-
-
-
-
-
-
-
-
-</RelativeLayout>
+       </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -53,7 +53,7 @@ public class JobActivity extends AppCompatActivity {
         txtRequirements = (EditText) findViewById(R.id.et_personrequirements_id);
 
 
-        databaseReference = FirebaseDatabase.getInstance().getReference().child("Jobs Posted");
+        databaseReference = FirebaseDatabase.getInstance().getReference().child("Davido");
         submit = (Button)findViewById(R.id.bt_Submit1_id);
         submit.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -18,9 +18,9 @@ import com.google.firebase.database.FirebaseDatabase;
 public class DetailsActivity extends AppCompatActivity {
 
 
-    private EditText country, firname, laname, username, emailadress, phonumber, enterpassword, conpassword;
+    private EditText laname, username, emailadress, phonumber, enterpassword, conpassword;
     private Button submit;
-    private Button back;
+    private Button login2;
 
     Signer signer;
 
@@ -35,8 +35,7 @@ public class DetailsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_details);
 
 
-        country = (EditText) findViewById(R.id.et_enteryourcountry);
-        firname = (EditText) findViewById(R.id.et_enteryourfname_id);
+
         laname = (EditText) findViewById(R.id.et_enteryourlastname_id);
         username = (EditText) findViewById(R.id.et_enteryourusername_id);
         emailadress = (EditText) findViewById(R.id.et_enteryouremailaddress_id);
@@ -59,8 +58,8 @@ public class DetailsActivity extends AppCompatActivity {
 
             }
         });
-        back = (Button) findViewById(R.id.bt_back_id);
-        back.setOnClickListener(new View.OnClickListener() {
+        login2 = (Button) findViewById(R.id.bt_login2_id);
+        login2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -77,9 +76,6 @@ public class DetailsActivity extends AppCompatActivity {
 
     private void btsubmit() {
 
-
-        String signerCountry = country.getText().toString();
-        String signerFirName = firname.getText().toString();
         String signerLaName = laname.getText().toString();
         String signerUserName = username.getText().toString();
         String signerEmailAdress = emailadress.getText().toString();
@@ -88,7 +84,7 @@ public class DetailsActivity extends AppCompatActivity {
         String signerConPassword = conpassword.getText().toString();
 
 
-        Signer signer = new Signer(signerCountry, signerFirName, signerLaName, signerUserName, signerEmailAdress,
+        Signer signer = new Signer(signerLaName, signerUserName, signerEmailAdress,
                 signerPhoneNumber, signerPassword, signerConPassword);
         
 

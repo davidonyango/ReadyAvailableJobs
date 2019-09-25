@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".NextActivity"
     android:orientation="horizontal"
+    android:layout_weight="7"
    android:background="@drawable/content_border">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/rl_content_border_id"
-        android:background="@drawable/content_border"
         android:layout_marginRight="10dp"
-        android:layout_marginLeft="10dp">
+        android:layout_marginLeft="10dp"
+        android:gravity="center">
 
 
 
@@ -27,18 +28,18 @@
         android:layout_marginTop="40dp"
         android:textSize="17dp"
         android:textColor="#000000"
-        android:textStyle="italic"/>
+        android:textStyle="normal"/>
 
     <Button
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="27dp"
         android:id="@+id/bt_createanaccount_id"
         android:text="Create An Account"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="10dp"
         android:layout_below="@id/tv_clicktocreateacc_id"
         android:layout_centerHorizontal="true"
-        android:background="@drawable/buttons_border"
-        android:textColor="#ffffff"
+        android:textColor="#0080ff"
+        android:background="#ffffff"
         android:paddingRight="15dp"
         android:paddingLeft="15dp"
         android:textAllCaps="false"/>
@@ -52,22 +53,22 @@
         android:layout_centerHorizontal="true"
         android:textColor="#000000"
         android:layout_below="@id/bt_createanaccount_id"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="50dp"
         android:textSize="17dp"
-        android:textStyle="italic"/>
+        android:textStyle="normal"/>
 
 
 
     <Button
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="27dp"
         android:id="@+id/bt_login_id"
         android:text="Login"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_below="@id/tv_logintext_id"
         android:layout_centerHorizontal="true"
-        android:background="@drawable/buttons_border"
-        android:textColor="#ffffff"
+        android:background="#ffffff"
+        android:textColor="#0080ff"
         android:paddingRight="15dp"
         android:paddingLeft="15dp"
         android:textAllCaps="false"/>
@@ -77,4 +78,4 @@
 
     </RelativeLayout>
 
-</RelativeLayout>
+</LinearLayout>

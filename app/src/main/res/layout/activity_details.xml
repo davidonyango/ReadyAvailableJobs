@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DetailsActivity"
-    android:background="#ffffff">
+    android:background="#ffffff"
+    android:layout_weight="7">
 
 
     <LinearLayout
-        android:layout_width="350dp"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/ll_content_border_id"
-        android:background="@drawable/content_border">
+        android:background="@drawable/content_border"
+        android:gravity="center">
 
 
 
@@ -30,7 +32,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:id="@+id/rl_content_id"
-                android:background="@drawable/content_border"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp">
 
@@ -49,48 +50,18 @@
                     android:paddingLeft="15dp"/>
 
 
-                 <EditText
-                    android:layout_width="250dp"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/et_enteryourcountry"
-                    android:hint="Enter your country"
-                    android:layout_marginTop="30dp"
-                    android:layout_below="@id/tv_regdetails_id"
-                    android:layout_marginLeft="20dp"
-                    android:background="@drawable/edittexts_border"
-                    android:paddingLeft="15dp"
-                    android:paddingRight="15dp"
-                    android:paddingBottom="15dp"
-                    android:textAlignment="center"
-                     android:layout_centerHorizontal="true"/>
 
-
-                <EditText
-                    android:layout_width="250dp"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/et_enteryourfname_id"
-                    android:hint="Enter your first name"
-                    android:layout_marginTop="30dp"
-                    android:layout_below="@id/et_enteryourcountry"
-                    android:layout_marginLeft="20dp"
-                    android:background="@drawable/edittexts_border"
-                    android:paddingLeft="15dp"
-                    android:paddingRight="15dp"
-                    android:paddingBottom="15dp"
-                    android:textAlignment="center"
-                    android:layout_centerHorizontal="true"
-                    android:inputType="textPersonName"/>
 
 
                 <EditText
                     android:id="@+id/et_enteryourlastname_id"
                     android:layout_width="250dp"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/et_enteryourfname_id"
+                    android:layout_below="@id/tv_regdetails_id"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="28dp"
                     android:background="@drawable/edittexts_border"
-                    android:hint="Enter your last name"
+                    android:hint="Enter your full names"
                     android:paddingLeft="15dp"
                     android:paddingRight="15dp"
                     android:paddingBottom="15dp"
@@ -190,8 +161,8 @@
 
 
                 <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="240dp"
+                    android:layout_height="28dp"
                     android:id="@+id/bt_submit_id"
                     android:text="Submit"
                     android:layout_below="@id/et_confirmyourpassword_id"
@@ -199,30 +170,34 @@
                     android:layout_marginTop="30dp"
                     android:textColor="#ffffff"
                     android:textStyle="bold"
-                    android:background="@drawable/submit_border"
+                    android:layout_centerHorizontal="true"
+                    android:background="#0080ff"
                     android:textAllCaps="false"/>
 
 
 
                 <Button
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/bt_back_id"
-                    android:text="Back"
-                    android:layout_below="@id/et_confirmyourpassword_id"
-                    android:layout_marginLeft="170dp"
+                    android:layout_height="28dp"
+                    android:id="@+id/bt_login2_id"
+                    android:text="Login"
+                    android:layout_below="@id/bt_submit_id"
+                    android:layout_marginLeft="190dp"
                     android:layout_marginTop="30dp"
                     android:textColor="#ffffff"
                     android:textStyle="bold"
-                    android:background="@drawable/buttons_border"
+                   android:background="#0080ff"
                     android:textAllCaps="false"/>
 
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/tv_space_id"
+                    android:id="@+id/tv_logintext_id"
+                    android:text="Already have an account?Login"
+                    android:textSize="13dp"
+                    android:textColor="#0000ff"
                     android:layout_below="@id/bt_submit_id"
-                    android:layout_marginTop="20dp"/>
+                    android:layout_marginTop="32dp"/>
 
 
 
@@ -241,4 +216,4 @@
     </RelativeLayout>
     </LinearLayout>
 
-</RelativeLayout>
+</LinearLayout>

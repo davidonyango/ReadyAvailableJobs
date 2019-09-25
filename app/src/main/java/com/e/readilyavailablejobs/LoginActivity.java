@@ -10,20 +10,19 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class LoginActivity extends AppCompatActivity {
-    private TextView pleaselogin;
     private TextView enterDetailshere;
     private EditText entphonenumber;
     private EditText entusername;
     private EditText entpassword;
     private Button submit2;
     private Button ctreateaccount;
+    private TextView accountRequst;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
-        pleaselogin = (TextView)findViewById(R.id.tv_pleaselogin_id);
+        accountRequst = (TextView)findViewById(R.id.tv_accountrequest_id);
         enterDetailshere = (TextView)findViewById(R.id.tv_enterdetailshere_id);
         entphonenumber = (EditText) findViewById(R.id.et_enterphonenumber_id);
         entusername = (EditText)findViewById(R.id.et_enterusername_id);

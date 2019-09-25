@@ -70,7 +70,7 @@ public class DetailsActivity extends AppCompatActivity {
 
     private void btlogin() {
 
-        Intent intent = new Intent(DetailsActivity.this, NextActivity.class);
+        Intent intent = new Intent(DetailsActivity.this, LoginActivity.class);
         startActivity(intent);
     }
 

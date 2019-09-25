@@ -33,7 +33,8 @@
                 android:layout_height="match_parent"
                 android:id="@+id/rl_content_id"
                 android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp">
+                android:layout_marginRight="20dp"
+                android:paddingBottom="30dp">
 
 
                 <TextView
@@ -177,7 +178,7 @@
 
 
                 <Button
-                    android:layout_width="wrap_content"
+                    android:layout_width="80dp"
                     android:layout_height="28dp"
                     android:id="@+id/bt_login2_id"
                     android:text="Login"

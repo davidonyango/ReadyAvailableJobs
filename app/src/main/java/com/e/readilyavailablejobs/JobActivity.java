@@ -28,7 +28,7 @@ public class JobActivity extends AppCompatActivity {
             txtLocation, txtPhoneNumber, txtJobType,
             txtDuration, txtRequirements;
 
-    private Button submit, homePage;
+    private Button submit;
     private Toolbar mtoolbar;
 
     private  Class<Davido> UserDataUploadClass;
@@ -72,14 +72,7 @@ public class JobActivity extends AppCompatActivity {
             }
         });
 
-        homePage = (Button)findViewById(R.id.bt_homepage_id);
-        homePage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-                bthomepage();
-            }
-        });
     }
 
     /**
@@ -139,10 +132,5 @@ public class JobActivity extends AppCompatActivity {
         }
     }
 
-    private void bthomepage() {
-
-        Intent intent = new Intent(JobActivity.this,JobpageActivity.class);
-        startActivity(intent);
-    }
 }
 

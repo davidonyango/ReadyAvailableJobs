@@ -33,13 +33,15 @@ public class GetjobActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_getjob);
 
+        String [] items = {"Item1","Item2","Location/City/Town","phone Number","The type of job to be done","The Duration of Employment","Requirements/Skills needed"};
+
         mtoolbar = (Toolbar)findViewById(R.id.toolbar);
         setSupportActionBar(mtoolbar);
         getSupportActionBar().setTitle("Posted Ready Jobs");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         listView = findViewById(R.id.list_view);
-        databaseReference = FirebaseDatabase.getInstance().getReference("Jobs Posted");
+        databaseReference = FirebaseDatabase.getInstance().getReference("Davido");
         userJobsList = new ArrayList<>();
     }
 

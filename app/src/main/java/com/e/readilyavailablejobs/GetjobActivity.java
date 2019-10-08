@@ -33,7 +33,8 @@ public class GetjobActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_getjob);
 
-        String [] items = {"Item1","Item2","Location/City/Town","phone Number","The type of job to be done","The Duration of Employment","Requirements/Skills needed"};
+        String [] items = {"Name","Country","Item3","Item4","Item5","Item6","Item7"};
+        
 
         mtoolbar = (Toolbar)findViewById(R.id.toolbar);
         setSupportActionBar(mtoolbar);

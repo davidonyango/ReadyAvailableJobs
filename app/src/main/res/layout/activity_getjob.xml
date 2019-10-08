@@ -14,7 +14,7 @@
             layout="@layout/toolbar"
             android:id="@+id/toolbar"/>
 
-    </RelativeLayout>
+
 
     <ListView
         android:id="@+id/list_view"
@@ -26,4 +26,6 @@
         android:divider="@drawable/mydevider"
         android:dividerHeight="5dp"/>
 
+
+    </RelativeLayout>
 </RelativeLayout>

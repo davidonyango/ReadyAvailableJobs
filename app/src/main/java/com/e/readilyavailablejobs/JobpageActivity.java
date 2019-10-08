@@ -7,6 +7,8 @@ import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -165,6 +167,57 @@ public class JobpageActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
         }
+
+
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.commonmenu,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+
+        if (id==R.id.share)
+
+        {
+            Toast.makeText(this, "Share menu is clicked", Toast.LENGTH_SHORT).show();
+            switch (item.getItemId()){
+
+                case R.id.share:
+                    Intent sharingIntent = new Intent(Intent.ACTION_SEND);
+                    sharingIntent.setType("text/plain");
+                    String shareBody ="https://getreadilyavailablejobs.com/davidoRajApp";
+                    String shareSubject = "Your Subject Here";
+
+                    sharingIntent.putExtra(Intent.EXTRA_TEXT,shareBody);
+                    sharingIntent.putExtra(Intent.EXTRA_SUBJECT,shareSubject);
+
+                    startActivity(Intent.createChooser(sharingIntent,"Share Via"));
+                    break;
+            }
+
+        }
+        else
+        if (id==R.id.about){
+
+            Toast.makeText(this, "About menu is clicked", Toast.LENGTH_SHORT).show();
+        }
+        else
+        if (id==R.id.logout){
+
+            Toast.makeText(this, "Logout menu is clicked", Toast.LENGTH_SHORT).show();
+        }
+
+
+        return super.onOptionsItemSelected(item);
+
+
+
+
     }
 }
 

@@ -1,7 +1,9 @@
 
 package com.e.readilyavailablejobs;
 
+import android.app.Dialog;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
@@ -38,12 +40,16 @@ public class JobpageActivity extends AppCompatActivity {
     private FirebaseStorage storage;
     private StorageReference storageReference;
     private Toolbar mtoolbar;
+    private Dialog aboutRajPopup;
+    private Button ok;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_jobpage);
+
+        aboutRajPopup = new Dialog(this);
 
         mtoolbar = (Toolbar) findViewById(R.id.toolbar);
         setTitle("Home Profile");
@@ -190,7 +196,7 @@ public class JobpageActivity extends AppCompatActivity {
                 case R.id.share:
                     Intent sharingIntent = new Intent(Intent.ACTION_SEND);
                     sharingIntent.setType("text/plain");
-                    String shareBody ="https://getreadilyavailablejobs.com/davidoRajApp";
+                    String shareBody ="https://GetReadilyAvailableJobs.com/davidoRajApp";
                     String shareSubject = "Your Subject Here";
 
                     sharingIntent.putExtra(Intent.EXTRA_TEXT,shareBody);
@@ -205,6 +211,8 @@ public class JobpageActivity extends AppCompatActivity {
         if (id==R.id.about){
 
             Toast.makeText(this, "About menu is clicked", Toast.LENGTH_SHORT).show();
+            
+            aboutRajDialog();
         }
         else
         if (id==R.id.logout){
@@ -217,6 +225,28 @@ public class JobpageActivity extends AppCompatActivity {
 
 
 
+
+    }
+
+    private void aboutRajDialog() {
+
+        aboutRajPopup.setContentView(R.layout.aboutraj);
+        aboutRajPopup.getWindow().setBackgroundDrawableResource(R.color.colorAccent);
+        aboutRajPopup.show();
+
+        //setting a popup to the button
+        ok = findViewById(R.id.about_popUp_button_id);
+        ok.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                //Sending the user back to the posted jobs
+                Intent aboutIntent = new Intent(JobpageActivity.this, GetjobActivity.class);
+                aboutIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(aboutIntent);
+
+            }
+        });
 
     }
 }

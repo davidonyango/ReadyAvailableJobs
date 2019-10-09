@@ -6,7 +6,11 @@ import androidx.appcompat.widget.Toolbar;
 
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -34,7 +38,7 @@ public class GetjobActivity extends AppCompatActivity {
         setContentView(R.layout.activity_getjob);
 
         String [] items = {"Name","Country","Item3","Item4","Item5","Item6","Item7"};
-        
+
 
         mtoolbar = (Toolbar)findViewById(R.id.toolbar);
         setSupportActionBar(mtoolbar);

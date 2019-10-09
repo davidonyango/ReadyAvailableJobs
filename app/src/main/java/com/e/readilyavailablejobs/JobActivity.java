@@ -5,6 +5,7 @@ import androidx.appcompat.widget.Toolbar;
 
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -28,6 +29,7 @@ public class JobActivity extends AppCompatActivity {
             txtLocation, txtPhoneNumber, txtJobType,
             txtDuration, txtRequirements;
 
+
     private Button submit;
     private Toolbar mtoolbar;
 
@@ -49,15 +51,13 @@ public class JobActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("Post A Ready Jobs");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-
-
-        txtName = (EditText) findViewById(R.id.et_personname_id);
-        txtCountry = (EditText) findViewById(R.id.et_personcountry_id);
-        txtLocation = (EditText) findViewById(R.id.et_personlocation_id);
-        txtPhoneNumber = (EditText) findViewById(R.id.et_personphonenumber_id);
-        txtJobType= (EditText) findViewById(R.id.et_personjobtype_id);
-        txtDuration = (EditText) findViewById(R.id.et_personduration_id);
-        txtRequirements = (EditText) findViewById(R.id.et_personrequirements_id);
+        txtName =  findViewById(R.id.et_personname_id);
+        txtCountry =  findViewById(R.id.et_personcountry_id);
+        txtLocation =  findViewById(R.id.et_personlocation_id);
+        txtPhoneNumber =  findViewById(R.id.et_personphonenumber_id);
+        txtJobType=  findViewById(R.id.et_personjobtype_id);
+        txtDuration =  findViewById(R.id.et_personduration_id);
+        txtRequirements =  findViewById(R.id.et_personrequirements_id);
 
 
         databaseReference = FirebaseDatabase.getInstance().getReference().child("Davido");
